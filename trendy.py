@@ -10,3 +10,22 @@ Sample Input:
 Sample Output:
 Trendy Number
 ...
+def is_trendy_number(n):
+    # Check if the number is a three-digit number
+    if 100 <= n <= 999:
+        # Convert number to string to access digits
+        str_n = str(n)
+        # Get the middle digit
+        middle_digit = int(str_n[1])
+        
+        # Check if the middle digit is divisible by 3
+        if middle_digit % 3 == 0:
+            return "Trendy Number"
+    
+    return "Not a Trendy Number"
+
+# Input format
+n = int(input("Enter a number: "))
+# Output format
+result = is_trendy_number(n)
+print(result)
